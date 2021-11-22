@@ -1,11 +1,11 @@
 import { sync } from 'vuex-router-sync';
 import forEach from 'lodash/forEach';
-import router from 'kolibri.coreVue.router';
-import logger from 'kolibri.lib.logging';
-import Vue from 'kolibri.lib.vue';
-import store from 'kolibri.coreVue.vuex.store';
-import heartbeat from 'kolibri.heartbeat';
-import KolibriModule from 'kolibri_module';
+import router from 'madrassati.coreVue.router';
+import logger from 'madrassati.lib.logging';
+import Vue from 'madrassati.lib.vue';
+import store from 'madrassati.coreVue.vuex.store';
+import heartbeat from 'madrassati.heartbeat';
+import MadrassatiModule from 'madrassati_module';
 
 export const logging = logger.getLogger(__filename);
 
@@ -13,7 +13,7 @@ export const logging = logger.getLogger(__filename);
  * A class for single page apps that control routing and vuex state.
  * Override the routes, mutations, initialState, and RootVue getters.
  */
-export default class KolibriApp extends KolibriModule {
+export default class MadrassatiApp extends MadrassatiModule {
   /*
    * @return {Array[Object]} Array of objects that define vue-router route configurations.
    *                         These will get passed to our internal router, so the handlers should

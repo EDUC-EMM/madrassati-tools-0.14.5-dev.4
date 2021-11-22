@@ -8,10 +8,10 @@ import Vue from 'vue';
 import VueMeta from 'vue-meta';
 import VueRouter from 'vue-router';
 import Vuex from 'vuex';
-import { i18nSetup } from 'kolibri.utils.i18n';
-import KThemePlugin from 'kolibri-design-system/lib/KThemePlugin';
-import KContentPlugin from 'kolibri-design-system/lib/content/KContentPlugin';
-import KSelect from '../../../kolibri/core/assets/src/views/KSelect';
+import { i18nSetup } from 'madrassati.utils.i18n';
+import KThemePlugin from 'madrassati-design-system/lib/KThemePlugin';
+import KContentPlugin from 'madrassati-design-system/lib/content/KContentPlugin';
+import KSelect from '../../../madrassati/core/assets/src/views/KSelect';
 
 global.beforeEach(() => {
   return new Promise(resolve => {

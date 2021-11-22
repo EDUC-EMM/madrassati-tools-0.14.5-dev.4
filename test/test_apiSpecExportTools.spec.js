@@ -23,7 +23,7 @@ const twoDeepLocal = {
 };
 
 describe('coreExternals', function() {
-  // Note: all externals objects will have at least one entry for the Kolibri object itself.
+  // Note: all externals objects will have at least one entry for the Madrassati object itself.
   function expectLengthOfCoreExternals(apiSpec, length) {
     expect(Object.keys(apiSpecExportTools.coreExternals('test_global'))).toHaveLength(length);
   }
@@ -88,9 +88,9 @@ describe('coreAliases', function() {
       apiSpecExportTools.__set__('apiSpec', oneDeepLocal);
       expectLengthCoreAliases(apiSpecExportTools, baseAliasesLength + 1);
     });
-    it('should have a path of kolibri.test', function() {
+    it('should have a path of madrassati.test', function() {
       apiSpecExportTools.__set__('apiSpec', oneDeepLocal);
-      expect(Object.keys(apiSpecExportTools.coreAliases())).toContain('kolibri.test');
+      expect(Object.keys(apiSpecExportTools.coreAliases())).toContain('madrassati.test');
     });
   });
   describe('2 nested valid spec with local import', function() {
@@ -98,9 +98,9 @@ describe('coreAliases', function() {
       apiSpecExportTools.__set__('apiSpec', twoDeepLocal);
       expectLengthCoreAliases(apiSpecExportTools, baseAliasesLength + 1);
     });
-    it('should have a path of kolibri.test.test', function() {
+    it('should have a path of madrassati.test.test', function() {
       apiSpecExportTools.__set__('apiSpec', twoDeepLocal);
-      expect(Object.keys(apiSpecExportTools.coreAliases())).toContain('kolibri.test.test');
+      expect(Object.keys(apiSpecExportTools.coreAliases())).toContain('madrassati.test.test');
     });
   });
 });

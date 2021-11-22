@@ -1,17 +1,17 @@
 {
-  "name": "kolibri-tools",
+  "name": "madrassati-tools",
   "version": "0.14.5-dev.4",
-  "description": "Tools for building Kolibri frontend plugins",
+  "description": "Tools for building Madrassati frontend plugins",
   "main": "lib/cli.js",
-  "repository": "github.com/learningequality/kolibri",
-  "author": "Learning Equality",
+  "repository": "github.com/learningequality/madrassati",
+  "author": "Madrassati",
   "license": "MIT",
   "private": false,
   "bin": {
-    "kolibri-tools": "./lib/cli.js"
+    "madrassati-tools": "./lib/cli.js"
   },
   "scripts": {
-    "build-kolibri-tools": "node ./build_kolibri_tools.js"
+    "build-madrassati-tools": "node ./build_madrassati_tools.js"
   },
   "dependencies": {
     "@babel/core": "^7.9.6",
@@ -38,7 +38,7 @@
     "eslint-config-vue": "^2.0.2",
     "eslint-plugin-import": "^2.20.0",
     "eslint-plugin-jest": "^23.3.0",
-    "eslint-plugin-kolibri": "0.14.5-dev.4",
+    "eslint-plugin-madrassati": "git+ssh://git@github.com:EDUC-EMM/eslint-plugin-madrassati-0.14.5-dev.4.git",
     "eslint-plugin-vue": "^6.1.2",
     "espree": "^5.0.1",
     "esquery": "^1.0.1",
@@ -83,7 +83,7 @@
     "vue-template-compiler": "^2.6.11",
     "webpack": "^4.6.0",
     "webpack-bundle-analyzer": "^3.0.3",
-    "webpack-bundle-tracker": "https://github.com/learningequality/webpack-bundle-tracker",
+    "webpack-bundle-tracker": "git+ssh://git@github.com:EDUC-EMM/webpack-bundle-tracker.git",
     "webpack-cli": "^2.0.15",
     "webpack-dev-middleware": "^3.1.2",
     "webpack-dev-server": "^3.1.14",
@@ -100,6 +100,6 @@
     "readline-sync": "^1.4.9"
   },
   "optionalDependencies": {
-    "kolibri": "0.14.5-dev.4"
+    "madrassati": "git+ssh://git@github.com:EDUC-EMM/madrassati-0.14.5-dev.4.git"
   }
 }

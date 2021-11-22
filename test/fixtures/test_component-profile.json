@@ -26,7 +26,7 @@
     ],
     "uses": []
   },
-  "Please consult your Kolibri administrator to be assigned to a class": {
+  "Please consult your Madrassati administrator to be assigned to a class": {
     "definitions": [
       {
         "namespace": "TestComponent",
@@ -44,7 +44,7 @@
     ],
     "uses": []
   },
-  "Please consult your Kolibri administrator": {
+  "Please consult your Madrassati administrator": {
     "definitions": [
       {
         "namespace": "TestComponent",

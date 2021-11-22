@@ -7,11 +7,11 @@
 
 <script>
 
-  /* eslint-disable kolibri/vue-no-unused-translations */
+  /* eslint-disable madrassati/vue-no-unused-translations */
   /**
    * This file includes context object definitions.
    */
-  import { createTranslator } from 'kolibri.utils.i18n';
+  import { createTranslator } from 'madrassati.utils.i18n';
 
   /* eslint-disable-next-line */
   const extraTranslator = createTranslator('Context03', {

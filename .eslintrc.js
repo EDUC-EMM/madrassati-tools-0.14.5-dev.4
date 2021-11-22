@@ -42,7 +42,7 @@ module.exports = {
     __version: true,
     __filename: true,
     __copyrightYear: true,
-    __kolibriModuleName: true,
+    __madrassatiModuleName: true,
   },
   extends: [
     'eslint:recommended',
@@ -51,7 +51,7 @@ module.exports = {
     'plugin:import/warnings',
     'prettier',
   ],
-  plugins: ['import', 'vue', 'kolibri'],
+  plugins: ['import', 'vue', 'madrassati'],
   settings: {
     'import/resolver': {
       [path.resolve(path.join(path.dirname(__filename), './lib/alias_import_resolver.js'))]: {
@@ -200,14 +200,14 @@ module.exports = {
     'import/order': ERROR,
 
     // Custom vue rules
-    'kolibri/vue-filename-and-component-name-match': ERROR,
-    'kolibri/vue-component-registration-casing': ERROR,
-    'kolibri/vue-no-unused-properties': ERROR,
-    'kolibri/vue-no-unused-vuex-properties': ERROR,
-    'kolibri/vue-no-unused-methods': ERROR,
-    'kolibri/vue-no-unused-vuex-methods': ERROR,
-    'kolibri/vue-watch-no-string': ERROR,
-    'kolibri/vue-no-unused-translations': ERROR,
-    'kolibri/vue-no-undefined-string-uses': ERROR,
+    'madrassati/vue-filename-and-component-name-match': ERROR,
+    'madrassati/vue-component-registration-casing': ERROR,
+    'madrassati/vue-no-unused-properties': ERROR,
+    'madrassati/vue-no-unused-vuex-properties': ERROR,
+    'madrassati/vue-no-unused-methods': ERROR,
+    'madrassati/vue-no-unused-vuex-methods': ERROR,
+    'madrassati/vue-watch-no-string': ERROR,
+    'madrassati/vue-no-unused-translations': ERROR,
+    'madrassati/vue-no-undefined-string-uses': ERROR,
   },
 };

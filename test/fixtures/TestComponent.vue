@@ -1,7 +1,7 @@
 <template>
 
   <!--
-    TEST COMPONENT - Stolen from a real Kolibri component - has a
+    TEST COMPONENT - Stolen from a real Madrassati component - has a
     known quantity of each kind of Use to extract and test against.
 
     5 Common
@@ -75,8 +75,8 @@
   /* eslint-disable */
 
   import { mapGetters, mapState } from 'vuex';
-  import commonCoreStrings from 'kolibri.coreVue.mixins.commonCoreStrings';
-  import urls from 'kolibri.urls';
+  import commonCoreStrings from 'madrassati.coreVue.mixins.commonCoreStrings';
+  import urls from 'madrassati.urls';
   import commonCoach from './common';
 
   export default {
@@ -103,7 +103,7 @@
         return '';
       },
       createClassUrl() {
-        const facilityUrl = urls['kolibri:kolibri.plugins.facility:facility_management'];
+        const facilityUrl = urls['madrassati:madrassati.plugins.facility:facility_management'];
         if (facilityUrl) {
           return facilityUrl();
         }
@@ -116,9 +116,9 @@
       classNameLabel: 'Class name',
       noAssignedClassesHeader: "You aren't assigned to any classes",
       noAssignedClassesDetails:
-        'Please consult your Kolibri administrator to be assigned to a class',
+        'Please consult your Madrassati administrator to be assigned to a class',
       noClassesDetailsForAdmin: 'Create a class and enroll learners',
-      noClassesDetailsForFacilityCoach: 'Please consult your Kolibri administrator',
+      noClassesDetailsForFacilityCoach: 'Please consult your Madrassati administrator',
       noClassesInFacility: 'There are no classes yet',
     },
   };

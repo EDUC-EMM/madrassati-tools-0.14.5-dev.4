@@ -1,10 +1,10 @@
-import KolibriModule from 'kolibri_module';
+import MadrassatiModule from 'madrassati_module';
 
-export default class ContentRenderer extends KolibriModule {
+export default class ContentRenderer extends MadrassatiModule {
   get rendererComponent() {
     return null;
   }
   loadDirectionalCSS(direction) {
-    return this.Kolibri.loadDirectionalCSS(this, direction);
+    return this.Madrassati.loadDirectionalCSS(this, direction);
   }
 }

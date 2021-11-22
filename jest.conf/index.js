@@ -16,7 +16,7 @@ Object.keys(apiSpecAliases).forEach(key => {
 
 module.exports = {
   globals: {
-    __kolibriModuleName: 'testmodule',
+    __madrassatiModuleName: 'testmodule',
     __version: 'testversion',
     __copyrightYear: '2018',
     'vue-jest': {
@@ -26,12 +26,12 @@ module.exports = {
   rootDir: path.resolve(process.cwd()),
   moduleFileExtensions: ['js', 'json', 'vue'],
   moduleNameMapper,
-  testURL: 'http://kolibri.time',
+  testURL: 'http://madrassati.time',
   transform: {
     '^.+\\.js$': path.resolve(__dirname, './babel-jest-transform'),
     '^.+\\.vue$': 'vue-jest',
   },
-  transformIgnorePatterns: ['/node_modules/(?!(kolibri-tools|kolibri)/).*/'],
+  transformIgnorePatterns: ['/node_modules/(?!(madrassati-tools|madrassati)/).*/'],
   snapshotSerializers: ['jest-serializer-vue'],
   setupFilesAfterEnv: [path.resolve(__dirname, './setup')],
   coverageDirectory: '<rootDir>/coverage',

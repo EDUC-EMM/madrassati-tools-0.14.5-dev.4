@@ -86,10 +86,10 @@ def get_version(module_path):
                 return module.__version__
             except (ImportError, AttributeError):
                 # This should work for most things, but seems like we are stuck
-                # Make one last try by importing Kolibri instead!
-                import kolibri
+                # Make one last try by importing Madrassati instead!
+                import madrassati
 
-                return kolibri.__version__
+                return madrassati.__version__
 
 
 def plugin_data(module_path):
@@ -97,11 +97,11 @@ def plugin_data(module_path):
         if resource_exists(module_path, BUILD_CONFIG):
             plugin_path = os.path.dirname(resource_filename(module_path, BUILD_CONFIG))
             version = get_version(module_path)
-            if module_path.startswith("kolibri."):
-                import kolibri
+            if module_path.startswith("madrassati."):
+                import madrassati
 
                 locale_data_folder = os.path.join(
-                    os.path.dirname(kolibri.__file__), "locale", "en", "LC_MESSAGES"
+                    os.path.dirname(madrassati.__file__), "locale", "en", "LC_MESSAGES"
                 )
             # Is an external plugin, do otherwise!
             else:

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 For usage instructions, see:
-    https://kolibri-dev.readthedocs.io/en/develop/references/i18n.html
+    https://madrassati-dev.readthedocs.io/en/develop/references/i18n.html
 
 This set of functions interacts with the crowdin API as documented here:
     https://support.crowdin.com/api/api-integration-setup/
@@ -36,21 +36,21 @@ def checkApiKey():
 
 
 """
-Ensure that Perseus is installed for development - but only in Kolibri
+Ensure that Perseus is installed for development - but only in Madrassati
 """
 
 PERSEUS_NOT_INSTALLED_FOR_DEV = """
-Perseus strings must be updated during releases along with Kolibri.
+Perseus strings must be updated during releases along with Madrassati.
 
-Clone https://github.com/learningequality/kolibri-exercise-perseus-plugin/
+Clone https://github.com/learningequality/madrassati-exercise-perseus-plugin/
 and ensure that it has been checked out the the correct commit.
 
-Install it in Kolibri in development mode:
+Install it in Madrassati in development mode:
 
     pip install -e [local_path_to_perseus_repo]
 
 For more information see:
-https://kolibri-dev.readthedocs.io/en/develop/i18n.html#updating-the-perseus-plugin
+https://madrassati-dev.readthedocs.io/en/develop/i18n.html#updating-the-perseus-plugin
 """
 
 
@@ -66,8 +66,8 @@ Gather needed environment variables
 """
 
 CROWDIN_PROJECT = os.getenv(
-    "CROWDIN_PROJECT", "kolibri"
-)  # crowdin project name - default to "kolibri"
+    "CROWDIN_PROJECT", "madrassati"
+)  # crowdin project name - default to "madrassati"
 CROWDIN_LOGIN = os.getenv("CROWDIN_LOGIN", None)
 
 # We need the login to interact with the API at all
@@ -79,7 +79,7 @@ if not CROWDIN_LOGIN:
 
 
 def checkPerseus():
-    if CROWDIN_PROJECT != "kolibri":
+    if CROWDIN_PROJECT != "madrassati":
         return
 
     print("THE PROJECT IS {}".format(CROWDIN_PROJECT))
@@ -107,7 +107,7 @@ Shared constants and helpers
 CROWDIN_API_KEY = os.environ["CROWDIN_API_KEY"]
 CROWDIN_API_URL = "https://api.crowdin.com/api/project/{proj}/{cmd}?account-key={key}&login={username}{params}"
 
-PERSEUS_CSV = "kolibri_exercise_perseus_plugin.main-messages.csv"
+PERSEUS_CSV = "madrassati_exercise_perseus_plugin.main-messages.csv"
 DJANGO_PO = "django.po"
 GLOSSARY_XML_FILE = "glossary.tbx"
 
@@ -404,7 +404,7 @@ def convert_files():
     Convert downloaded CSV files to JSON
     """
     _process_downloaded_files()
-    logging.info("Kolibri: CSV to JSON conversion succeeded!")
+    logging.info("Madrassati: CSV to JSON conversion succeeded!")
 
 
 """
@@ -461,7 +461,7 @@ def download_translations(branch):
             )
 
             # TODO - Update this to work with perseus properly - likely to need to update
-            # the kolibri-exercise-perseus-plugin repo directly to produce a CSV for its
+            # the madrassati-exercise-perseus-plugin repo directly to produce a CSV for its
             # translations.
 
             if not os.path.exists(perseus_target):

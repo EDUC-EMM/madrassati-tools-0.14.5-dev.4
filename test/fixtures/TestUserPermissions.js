@@ -1,5 +1,5 @@
 /**
- * This is a fixture modified from an existing Kolibri JS file that would
+ * This is a fixture modified from an existing Madrassati JS file that would
  * be parsed by webpack and processed for messages. This tests a realistic
  * profiling scenario.
  * This file includes known quantities of uses and definitions which should
@@ -13,9 +13,9 @@
 
 /* eslint-disable */
 
-import { DevicePermissionsResource, FacilityUserResource } from 'kolibri.resources';
-import samePageCheckGenerator from 'kolibri.utils.samePageCheckGenerator';
-import { createTranslator } from 'kolibri.utils.i18n';
+import { DevicePermissionsResource, FacilityUserResource } from 'madrassati.resources';
+import samePageCheckGenerator from 'madrassati.utils.samePageCheckGenerator';
+import { createTranslator } from 'madrassati.utils.i18n';
 
 const translator = createTranslator('UserPermissionToolbarTitles', {
   loading: 'Loading user permissions…',

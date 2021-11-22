@@ -27,14 +27,14 @@ jest.mock(
 );
 
 const baseData = {
-  name: 'kolibri.plugin.test.test_plugin',
+  name: 'madrassati.plugin.test.test_plugin',
   bundle_id: 'test_plugin',
   stats_file: 'output.json',
   static_url_root: 'static',
-  static_dir: 'kolibri/plugin/test',
-  locale_data_folder: 'kolibri/locale/test',
+  static_dir: 'madrassati/plugin/test',
+  locale_data_folder: 'madrassati/locale/test',
   version: 'test',
-  plugin_path: 'kolibri/plugin',
+  plugin_path: 'madrassati/plugin',
   config_path: 'test',
   index: null,
 };

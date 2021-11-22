@@ -7,10 +7,10 @@ import os
 import sys
 
 try:
-    import kolibri_exercise_perseus_plugin
+    import madrassati_exercise_perseus_plugin
 
     PERSEUS_LOCALE_PATH = os.path.join(
-        os.path.dirname(kolibri_exercise_perseus_plugin.__file__), "locale"
+        os.path.dirname(madrassati_exercise_perseus_plugin.__file__), "locale"
     )
     PERSEUS_SOURCE_PATH = os.path.join(PERSEUS_LOCALE_PATH, "en", "LC_MESSAGES")
 except ModuleNotFoundError:
@@ -29,13 +29,13 @@ logging.basicConfig(format="%(levelname)s: %(message)s", level=logging.INFO)
 logging.StreamHandler(sys.stdout)
 
 
-PROJECT_NAME = os.getenv("CROWDIN_PROJECT", "kolibri")
+PROJECT_NAME = os.getenv("CROWDIN_PROJECT", "madrassati")
 
 THIS_FILE_PATH = os.path.abspath(os.getcwd())
 
 LOCALE_OPTIONS = {
-    "kolibri": os.path.join(THIS_FILE_PATH, "kolibri/locale"),
-    "kolibri-studio": os.path.join(THIS_FILE_PATH, "contentcuration/locale"),
+    "madrassati": os.path.join(THIS_FILE_PATH, "madrassati/locale"),
+    "madrassati-studio": os.path.join(THIS_FILE_PATH, "contentcuration/locale"),
 }
 
 LOCALE_PATH = LOCALE_OPTIONS[PROJECT_NAME]
